@@ -1,0 +1,655 @@
+/* poppins fonts link  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --clr: white;
+}
+.premium-nav {
+  position: fixed;
+  width: 100%;
+  padding: 15px 40px;
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.55);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 0;
+  align-items: center;
+}
+
+/* Logo */
+.genshin-logo {
+  height: 45px;
+  transition: 0.3s ease;
+}
+
+.genshin-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Nav Links */
+.nav-link {
+  position: relative;
+  color: white !important;
+  font-weight: 500;
+  margin-left: 20px;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+}
+
+/* Underline Animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #ffd700, #ff9900);
+  transition: width 0.4s ease;
+  border-radius: 2px;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Glow */
+.nav-link:hover {
+  color: #ffd700 !important;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+}
+
+/* Active link highlight */
+.nav-link.active {
+  color: #ffd700 !important;
+}
+
+/* Hamburger */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.container-fluid {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Archons Section */
+.archons-section {
+  width: 100%;
+}
+
+.archon-card {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 68px 40px;
+  position: relative;
+  overflow: hidden;
+  view-timeline-name: --ram;
+  view-timeline-axis: block;
+}
+
+.venti-card {
+  background: linear-gradient(
+    135deg,
+    #a7f3d0 0%,
+    #34d399 25%,
+    #10b981 50%,
+    #059669 75%,
+    #065f46 100%
+  );
+
+  background-image: url(./monstad-photos/venti-bg.jpeg);
+  background-attachment: fixed;
+  background-position: 100% 100%;
+  background-size: cover;
+}
+
+.zhongli-card {
+  background: linear-gradient(
+    135deg,
+    #fcd34d 0%,
+    #f59e0b 25%,
+    #b45309 50%,
+    #78350f 75%,
+    #451a03 100%
+  );
+
+  background-image: url(./liyue-photos/zhongli-bg.png);
+  background-attachment: fixed;
+  background-position: 100% 100%;
+  background-size: cover;
+}
+
+.raiden-card {
+  background: linear-gradient(
+    135deg,
+    #e9d5ff 0%,
+    #c084fc 25%,
+    #9333ea 50%,
+    #6b21a8 75%,
+    #4c1d95 100%
+  );
+
+  background-image: url(./inzuma-photos/raiden-bg-3.png);
+  background-attachment: fixed;
+  background-position: 100% 100%;
+  background-size: cover;
+}
+
+.nahida-card {
+  background: linear-gradient(
+    135deg,
+    #dcfce7 0%,
+    #86efac 25%,
+    #22c55e 50%,
+    #15803d 75%,
+    #14532d 100%
+  );
+
+  background-image: url(./sumero-images/nadhida-bg.jpg);
+  background-attachment: fixed;
+  background-position: 100% 100%;
+  background-size: cover;
+}
+
+.furina-card {
+  background: linear-gradient(
+    135deg,
+    #dbeafe 0%,
+    #60a5fa 25%,
+    #2563eb 50%,
+    #1e3a8a 75%,
+    #172554 100%
+  );
+
+  background-image: url(./fontaine-images/furina-bg.jpg);
+  background-attachment: fixed;
+  background-position: 100% 100%;
+  background-size: cover;
+}
+
+.mavuika-card {
+  background: linear-gradient(
+    135deg,
+    #fee2e2 0%,
+    #fb7185 25%,
+    #ef4444 50%,
+    #b91c1c 75%,
+    #7f1d1d 100%
+  );
+
+  background-image: url(./natland-images/mavuiks-bg.png);
+  background-attachment: fixed;
+  background-position: 100% 100%;
+  background-size: cover;
+}
+
+.tsaritsa-card {
+  background: linear-gradient(
+    135deg,
+    #f0f9ff 0%,
+    #bae6fd 25%,
+    #38bdf8 50%,
+    #0ea5e9 75%,
+    #075985 100%
+  );
+
+  background-image: url(./nodkari-images/columbina-bg.jpg);
+  background-attachment: fixed;
+  background-position: 100% 100%;
+  background-size: cover;
+}
+
+.archon-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+
+.archon-content {
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.archon-image-side {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.archon-main-image {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  z-index: 2;
+}
+
+.archon-main-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Right Side - Info */
+.archon-info-side {
+  flex: 1.3;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.archon-phone-mockup {
+  width: 280px;
+  min-width: 280px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  padding: 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.archon-phone-mockup::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 25px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0 0 15px 15px;
+  z-index: 10;
+}
+
+.archon-phone-mockup img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+.archon-details {
+  flex: 1;
+  color: white;
+}
+
+.archon-name {
+  font-size: 72px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.archon-description h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.archon-description p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.95);
+  text-align: justify;
+}
+
+.archon-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-item:last-child {
+  border-bottom: none;
+}
+
+.stat-label {
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+}
+
+.get-started-btn {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  padding: 15px 40px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.get-started-btn:hover {
+  background: white;
+  color: #333;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.get-started-btn i {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.get-started-btn:hover i {
+  transform: translateX(5px);
+}
+
+/*  SCROLL REVEAL BASE */
+.archon-image-side,
+.archon-phone-mockup,
+.archon-details {
+  opacity: 0;
+  animation-duration: 9s;
+  animation-fill-mode: forwards;
+  animation-timeline: --ram;
+}
+
+/* IMAGE FROM TOP */
+.archon-image-side {
+  animation-name: revealTop;
+  animation-range: entry 40% cover 30%;
+}
+
+@keyframes revealTop {
+  from {
+    transform: translateY(-120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* PHONE FROM BOTTOM */
+.archon-phone-mockup {
+  animation-name: revealBottom;
+  animation-range: entry 40% cover 50%;
+}
+
+@keyframes revealBottom {
+  from {
+    transform: translateY(120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.archon-details {
+  animation-name: revealRight;
+  animation-range: entry 40% cover 70%;
+}
+
+@keyframes revealRight {
+  from {
+    transform: translateX(120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.archon-main-image-columbina {
+  width: 370px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .archon-content {
+    gap: 40px;
+  }
+
+  .archon-name {
+    font-size: 60px;
+  }
+
+  .archon-phone-mockup {
+    width: 240px;
+    min-width: 240px;
+  }
+
+  .archon-phone-mockup img {
+    height: 420px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 10px;
+  }
+
+  .navbar-nav {
+    gap: 15px;
+  }
+
+  .archon-card {
+    padding: 80px 30px 60px 30px;
+  }
+
+  .archon-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .archon-image-side {
+    order: 1;
+  }
+
+  .archon-info-side {
+    order: 2;
+    width: 100%;
+  }
+
+  .archon-main-image {
+    max-width: 400px;
+  }
+
+  .element-symbol img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .archon-name {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .archon-card {
+    padding: 100px 20px 60px 20px;
+  }
+
+  .archon-info-side {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .archon-phone-mockup {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .archon-phone-mockup img {
+    height: 480px;
+  }
+
+  .archon-details {
+    width: 100%;
+    text-align: center;
+  }
+
+  .archon-name {
+    font-size: 48px;
+  }
+
+  .archon-description p {
+    text-align: center;
+  }
+
+  .archon-main-image {
+    max-width: 350px;
+  }
+
+  .element-symbol img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .archon-card {
+    padding: 90px 15px 50px 15px;
+  }
+
+  .archon-name {
+    font-size: 40px;
+  }
+
+  .archon-description h3 {
+    font-size: 16px;
+  }
+
+  .archon-description p {
+    font-size: 14px;
+  }
+
+  .archon-phone-mockup {
+    max-width: 280px;
+  }
+
+  .archon-phone-mockup img {
+    height: 400px;
+  }
+
+  .archon-main-image {
+    max-width: 280px;
+  }
+
+  .element-symbol {
+    bottom: 20px;
+  }
+
+  .element-symbol img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .stat-item {
+    font-size: 13px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+  }
+
+  .stat-value {
+    font-size: 14px;
+  }
+
+  .get-started-btn {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+}

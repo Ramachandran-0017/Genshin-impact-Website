@@ -1,0 +1,622 @@
+/* poppins fonts link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+  --clr: white;
+}
+
+.premium-nav {
+  position: fixed;
+  width: 100%;
+  padding: 15px 40px;
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+/* Logo */
+.genshin-logo {
+  height: 45px;
+  transition: 0.3s ease;
+}
+
+.genshin-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Nav Links */
+.nav-link {
+  position: relative;
+  color: white !important;
+  font-weight: 500;
+  margin-left: 20px;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+}
+
+/* Underline Animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #ffd700, #ff9900);
+  transition: width 0.4s ease;
+  border-radius: 2px;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Glow Effect */
+.nav-link:hover {
+  color: #ffd700 !important;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+}
+
+/* Hamburger icon white */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.container-fluid {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.nations-section {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.nations-section .nation {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 80px;
+  color: var(--clr);
+  view-timeline-name: --nationReveal;
+  view-timeline-axis: block;
+  overflow: hidden;
+  background-attachment: fixed;
+}
+
+.nations-section .mondstadt {
+  background-image: url(./monstad-photos/final-monstad.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.nations-section .liyue {
+  background-image: url(./liyue-photos/liyue-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.nations-section .Inazuma {
+  background-image: url(./inzuma-photos/inazuma.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.nations-section .sumero {
+  background-image: url(./sumero-images/sumero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.nations-section .fontaine {
+  background-image: url(./fontaine-images/fontaine-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.nations-section .natland {
+  background-image: url(./natland-images/natland-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.nations-section .nodkari {
+  background-image: url(./nodkari-images/nodkari-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mondstadt::before,
+.liyue::before,
+.fontaine::before,
+.natland::before,
+.nodkari::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.2) 40%,
+    rgba(0, 0, 0, 0.2) 70%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+.nation .nations-info {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  gap: 20px;
+  color: var(--clr);
+  position: relative;
+  z-index: 2;
+}
+
+.nations-info div:first-child {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 60px;
+  gap: 10px;
+}
+
+.nation-logo {
+  height: 110px;
+  width: 110px;
+  object-fit: contain;
+}
+
+.nations-info div:nth-child(2) h1 {
+  font-size: 46px !important;
+}
+
+.nations-info h1 {
+  margin-bottom: 10px;
+}
+
+.nations-info h4 {
+  margin-bottom: 15px;
+}
+
+.nations-info div:nth-child(2) {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 85px;
+}
+
+.nation .specialties {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 17px;
+  position: relative;
+  z-index: 2;
+}
+
+.specialties .cardss {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+/* Lift effect */
+.specialties .cardss:hover {
+  transform: translateY(-12px) scale(1.02);
+}
+
+/* MONDSTADT - Green glow */
+.mondstadt .cardss:hover {
+  box-shadow: 0 0 25px rgba(52, 211, 153, 0.6);
+}
+
+/* LIYUE - Gold glow */
+.liyue .cardss:hover {
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.6);
+}
+
+/* INAZUMA - Purple glow */
+.Inazuma .cardss:hover {
+  box-shadow: 0 0 25px rgba(147, 51, 234, 0.6);
+}
+
+/* SUMERU - Green glow */
+.sumero .cardss:hover {
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.6);
+}
+
+/* FONTAINE - Blue glow */
+.fontaine .cardss:hover {
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.6);
+}
+
+/* NATLAN - Red glow */
+.natland .cardss:hover {
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.6);
+}
+
+.inside-card,
+.inside-card-info {
+  height: 100%;
+  background: transparent;
+}
+.inside-card {
+  width: 35%;
+}
+.inside-card-info {
+  width: 65%;
+  display: flex;
+  color: black;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  position: relative;
+  padding: 5px;
+  color: var(--clr);
+}
+.card2 {
+  flex-direction: row-reverse;
+}
+
+.card2 .inside-card-info h4 {
+  text-align-last: left;
+}
+
+.inside-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.cardss:hover .inside-card img {
+  transform: scale(1.08);
+}
+
+.card2 {
+  flex-direction: row-reverse;
+}
+.card3 .inside-card-info button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  bottom: 1px;
+  right: -3px;
+  padding: 4px 6px;
+  border-radius: 8px;
+  border-top: 3px solid grey;
+  border-left: 3px solid grey;
+}
+
+.cardss::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+.cardss:hover::after {
+  left: 120%;
+}
+
+.nation .nations-info,
+.nation .specialties,
+.specialties .cardss {
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-timeline: --nationReveal;
+}
+
+.nation .nations-info {
+  animation-name: slideLeft;
+  animation-range: entry 0% cover 36%;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.nation .specialties {
+  animation-name: slideRight;
+  animation-range: entry 10% cover 50%;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(100%);
+    /* filter: blur(12px); */
+  }
+  to {
+    transform: translateX(0);
+    /* filter: blur(0); */
+  }
+}
+
+.specialties .card1 {
+  animation-name: cardReveal;
+  animation-range: entry 20% cover 50%;
+}
+
+.specialties .card2 {
+  animation-name: cardReveal;
+  animation-range: entry 35% cover 65%;
+}
+
+.specialties .card3 {
+  animation-name: cardReveal;
+  animation-range: entry 50% cover 80%;
+}
+
+@keyframes cardReveal {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1488px) {
+  .nation .specialties {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 45px;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .nations-section .nation {
+    padding: 120px 60px 60px 60px;
+    gap: 40px;
+  }
+
+  .nation .nations-info,
+  .nation .specialties {
+    width: 48%;
+  }
+
+  .nations-info div:nth-child(2) h1 {
+    font-size: 38px !important;
+  }
+
+  .nations-info div:nth-child(2) {
+    margin-top: 40px;
+  }
+
+  .specialties .cardss {
+    height: 180px;
+  }
+
+  .inside-card-info {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nations-section .nation {
+    padding: 140px 50px 50px 50px;
+    gap: 30px;
+  }
+
+  .nation .nations-info,
+  .nation .specialties {
+    width: 48%;
+  }
+
+  .nations-info div:nth-child(2) h1 {
+    font-size: 36px !important;
+  }
+
+  .nations-info div:nth-child(2) {
+    margin-top: 30px;
+  }
+
+  .specialties .cardss {
+    height: 180px;
+  }
+
+  .inside-card-info {
+    justify-content: flex-start;
+    padding: 5px;
+  }
+
+  .nation .specialties {
+    margin-top: 10px;
+    gap: 20px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .nation-logo {
+    height: 120px;
+    width: 120px;
+  }
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 10px;
+  }
+
+  .navbar-nav {
+    gap: 15px;
+  }
+  /* Apply to ALL nations, not just mondstadt */
+  .nations-section .nation {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 30px;
+  }
+
+  .inside-card {
+    height: 220px;
+    width: 35%;
+  }
+
+  .nation .nations-info,
+  .nation .specialties {
+    width: 100%;
+  }
+
+  .nation .nations-info {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .nations-info div:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .specialties .cardss {
+    height: auto;
+  }
+
+  .card3 .inside-card-info button {
+    bottom: -62px;
+    z-index: 999;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nation-logo {
+    height: 120px;
+    width: 120px;
+  }
+
+  .nations-info h1 {
+    margin-bottom: 10px;
+  }
+
+  .nations-info h4 {
+    margin-bottom: 15px;
+  }
+
+  .specialties .cardss {
+    flex-direction: column;
+  }
+
+  .inside-card,
+  .inside-card-info {
+    width: 100%;
+  }
+
+  .inside-card {
+    height: 220px;
+  }
+
+  .inside-card-info {
+    gap: 8px;
+  }
+
+  .card2 {
+    flex-direction: column !important;
+  }
+
+  .nations-info h1 {
+    letter-spacing: 2px;
+  }
+
+  .nations-info p {
+    line-height: 1.6;
+  }
+
+  .nation .nations-info,
+  .nation .specialties,
+  .specialties .cardss {
+    animation-duration: 4s;
+  }
+
+  .card3 .inside-card-info button {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nation-logo {
+    height: 110px;
+    width: 110px;
+  }
+
+  .nations-info h1 {
+    letter-spacing: 2px;
+  }
+
+  .nations-info p {
+    line-height: 1.6;
+  }
+
+  .nations-info div:nth-child(2) h1 {
+    font-size: 32px !important;
+  }
+
+  .inside-card {
+    height: 180px;
+  }
+
+  .inside-card-info p {
+    font-size: 14px;
+  }
+}

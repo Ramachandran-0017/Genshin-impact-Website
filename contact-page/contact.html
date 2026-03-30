@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Genshin Impact - Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-dark premium-nav">
+        <div class="container-fluid">
+          <img class="genshin-logo" src="./Genshin-Impact-Logo.png" />
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="../nations/nations.html">Nations</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="../archons/archons.html">Archons</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Contact</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="../login-page/loginPage.html"
+                  >Login</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section class="hero text-center">
+        <h1>ADVENTURERS' GUILD SUPPORT</h1>
+        <p>Travelers of Teyvat, the Guild is here to guide you.</p>
+      </section>
+
+      <section class="contact-section">
+        <div class="container-fluid px-3 px-md-5">
+          <div class="row align-items-stretch">
+            <div class="col-lg-5 mb-4 mb-lg-0 d-flex">
+              <div class="glass-card w-100">
+                <h3>Guild Support</h3>
+                <p><strong>Email:</strong> support@genshinimpact.com</p>
+                <p><strong>Location:</strong> Mondstadt Headquarters</p>
+                <p><strong>Available:</strong> 24/7 Across Teyvat</p>
+              </div>
+            </div>
+
+            <!-- FORM CARD -->
+            <div class="col-lg-7 d-flex">
+              <div class="glass-card w-100">
+                <h3>Send a Request</h3>
+                <form>
+                  <input
+                    type="text"
+                    class="form-control mb-3"
+                    placeholder="Traveler Name"
+                    required
+                  />
+                  <input
+                    type="email"
+                    class="form-control mb-3"
+                    placeholder="Traveler Email"
+                    required
+                  />
+                  <textarea
+                    class="form-control mb-3"
+                    rows="3"
+                    placeholder="Your Message to the Guild"
+                    required
+                  ></textarea>
+                  <button class="btn btn-genshin w-100">Submit Request</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
